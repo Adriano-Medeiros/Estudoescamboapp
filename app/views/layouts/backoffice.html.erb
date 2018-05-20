@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Escamboapp</title>
-    
-  </head>
-
-  <body>
-  <h1>backoffice </h1>
-    
-  </body>
-</html>
 
 <head>
   <meta charset="utf-8">
@@ -17,19 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>EscamboApp</title>
-    <%= csrf_meta_tags %>
+  
+  <title>BackOffice - EscamboApp</title>
+  
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
     
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-<%= yield %>  
+<%= render partial: "layouts/backoffice_shared/navegarion" %>
 
+<div class="row">
+<div class="col-12">
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    
+<%= yield %>  
+</div>
+</div>
+</div>
+
+<!-- /.container-fluid-->
+<!-- /.content-wrapper-->
+<footer class="sticky-footer">
+<div class="container">
+<div class="text-center">
+  <small>Copyright © Your Website 2018</small>
+</div>
+</div>
+</footer>
+  <% if notice %>
+    <script>
+    $.notify("<%=notice %>","success");
+  </script>
+  <%end%>
 </body>
 
 </html>

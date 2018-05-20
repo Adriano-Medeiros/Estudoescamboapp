@@ -4,7 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first) 
 
 #Category.create!(description: "teste")
 puts "Cadastrando as Categorias..."
@@ -19,3 +19,13 @@ categories.each do |category|
     Category.find_or_create_by(description: category)
 end              
 puts "Categorias cadastradas!!!"
+
+################################
+
+puts "Cadastrando administrador padrão..."
+
+Admin.create!(email:"admin@admin.com",
+             password:"123456", 
+             password_confirmation:"123456")
+             
+puts "Administrador padrão cadastrado com sucesso!!!"

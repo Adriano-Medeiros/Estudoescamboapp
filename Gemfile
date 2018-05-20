@@ -7,13 +7,16 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
-gem 'rails-i18n'
+gem 'rails-i18n' 
 gem 'foreman'
 gem 'devise'
 gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
-gem 'rails-assets-bootstrap4', '4.0', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap4', '3.3.7', source: 'https://rails-assets.org'
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'faker'
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
